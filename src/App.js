@@ -30,15 +30,13 @@ class App extends Component {
               id: snapShot.id,
               ...snapShot.data()
             }
-          }, () => {
-            console.log(this.state);
-          })
-        })
+          });
+        });
       }
       else {
-        this.setState({ currentUser: userAuth }) // set currentUser to null 
+        this.setState({ currentUser: userAuth }); // set currentUser to null 
       }
-    }) // save the function to unsubsribeFromAuth to call again later
+    }); // save the function to unsubsribeFromAuth to call again later
   }
 
   componentWillUnmount() {
